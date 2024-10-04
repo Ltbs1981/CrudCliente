@@ -7,11 +7,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Dominio\" />
-    <Folder Include="Infra\" />
-    <Folder Include="Servicos\" />
-  </ItemGroup>
-
 </Project>
