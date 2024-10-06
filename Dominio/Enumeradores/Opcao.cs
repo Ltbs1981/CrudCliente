@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace CrudCliente.Dominio.Enumeradores
 {
-    internal class Opcao
+    internal enum Opcao
     {
+        Nao,
+        Sim
     }
 }

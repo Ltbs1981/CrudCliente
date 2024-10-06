@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace CrudCliente.Dominio.Enumeradores
 {
-    internal class Menu
+    internal enum Menu
     {
-        //None = 0,
-        //Adicionar,
-        //ListarTodos
+        Nome = 0,
+        Adicionar,
+        ListarTodos
     }
 }
