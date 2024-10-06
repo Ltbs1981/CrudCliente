@@ -8,5 +8,8 @@ namespace CrudCliente.Dominio.Enumeradores
 {
     internal class Menu
     {
+        //None = 0,
+        //Adicionar,
+        //ListarTodos
     }
 }
