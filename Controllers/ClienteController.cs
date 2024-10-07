@@ -26,6 +26,12 @@ namespace CrudCliente.Controllers
             return _clienteService.GetAll();
         }
 
+        public void EditarCliente(int clienteId, string novoNome, string novoEmail, DateTime novaDataNascimento)
+        {
+            _clienteService = new ClienteService();
+            _clienteService.EditarCliente(clienteId, novoNome, novoEmail, novaDataNascimento);
+        }
+
         public void DeleteClienteFisico(int clienteId)
         {
             _clienteService = new ClienteService();

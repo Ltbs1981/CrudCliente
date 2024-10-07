@@ -3,8 +3,9 @@
     internal enum Menu
     {
         Nome = 0,
-        Adicionar,
-        ListarTodos,
-        DeletarClienteFisico
+        Adicionar = 1,
+        ListarTodos = 2,
+        EditarCliente = 3,
+        DeletarClienteFisico = 4,
     }
 }

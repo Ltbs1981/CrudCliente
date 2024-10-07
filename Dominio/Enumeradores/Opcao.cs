@@ -2,7 +2,7 @@
 {
     internal enum Opcao
     {
-        Nao,
-        Sim
-    }
+        Sim = 1,
+        Nao = 2,
+            }
 }

@@ -11,7 +11,7 @@ namespace CrudCliente
             do
             {
                 Console.WriteLine("Escolha ");
-                Console.WriteLine("1) Cadastrar cliente\n2) Listar todos\n3) Deletar cliente físico");
+                Console.WriteLine("1) Cadastrar cliente\n\t 2) Listar todos\n\t 3) Editar Cliente\n\t 4) Apagar um Cliente");
                 Menu menu = Enum.Parse<Menu>(Console.ReadLine());
 
                 ClienteController clienteController = new ClienteController();
@@ -38,6 +38,19 @@ namespace CrudCliente
                                                 $"Data de Nascimento: {cliente.DataNascimento.ToString("dd-MM-yyyy")}\n" +
                                                 $"Email : {cliente.Email}")
                                               );
+                        }
+                        break;
+                    case Menu.EditarCliente:
+                        {
+                            Console.WriteLine("Informe o ID do cliente a ser editado");
+                            int clienteId = int.Parse(Console.ReadLine());
+                            Console.WriteLine("Insira o novo nome do cliente");
+                            string nome = Console.ReadLine();
+                            Console.WriteLine("Insira o novo e-mail do cliente");
+                            string email = Console.ReadLine();
+                            Console.WriteLine("Informe a nova data de nascimento");
+                            DateTime nascimento = DateTime.Parse(Console.ReadLine());
+                            clienteController.EditarCliente(clienteId, nome, email, nascimento);
                         }
                         break;
 

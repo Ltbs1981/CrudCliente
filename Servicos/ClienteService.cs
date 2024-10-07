@@ -25,6 +25,25 @@ namespace CrudCliente.Servicos
             return _clienteRepositorio.GetClientes();
         }
 
+        public void EditarCliente(int clienteId, string novoNome, string novoEmail, DateTime novaDataNascimento)
+        {
+            _clienteRepositorio = new ClienteRepositorio();
+            var cliente = _clienteRepositorio.GetClientes().FirstOrDefault(c => c.Id == clienteId);
+
+            if (cliente != null)
+            {
+                cliente.Nome = novoNome;
+                cliente.Email = novoEmail;
+                cliente.DataNascimento = novaDataNascimento;
+                _clienteRepositorio.Update(cliente);
+                Console.WriteLine("Cliente atualizado com sucesso");
+            }
+            else
+            {
+                Console.WriteLine("Cliente não encontrado");
+            }
+        }
+
         public void DeleteClienteFisico(int clienteId)
         {
             _clienteRepositorio = new ClienteRepositorio();
