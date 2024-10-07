@@ -17,11 +17,13 @@ namespace CrudCliente.Servicos
 
             _clienteRepositorio = new ClienteRepositorio();
             _clienteRepositorio.Add(cliente);
+            Console.WriteLine("Cliente Inserido no sistema");
         }
 
         public List<Cliente> GetAll()
         {
             _clienteRepositorio = new ClienteRepositorio();
+            Console.WriteLine("Lista de Clientes ativos");
             return _clienteRepositorio.GetClientes();
         }
 
